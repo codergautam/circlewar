@@ -4,74 +4,47 @@
 <head>
     <!-- Meta Properties -->
     <meta charset='UTF-8'>
-    <title>surviv.io - 2d battle royale game</title>
+    <title>CircleWars!</title>
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=auto, user-scalable=no">
-    <link rel="manifest" href="manifest.json">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="surviv.io">
+    <meta name="apple-mobile-web-app-title" content="circlewars">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="application-name" content="surviv.io">
-    <meta name="description" content="Like games such as Player Unknown's Battlegrounds (PUBG), Fortnite or H1Z1 BR? Play this free 2d battle royale io game in your browser!">
-    <meta property="og:description" content="Like games such as Player Unknown's Battlegrounds (PUBG), Fortnite or H1Z1 BR? Play this free 2d battle royale io game in your browser!">
-    <meta name="keywords" content="survivio, surviv, 2d battle royale, io, battle royale browser game, 2d battlegrounds, battlegrounds, battleroyale, battle, royale, browser game, br, survival, game, web game, multiplayer">
+    <meta name="application-name" content="circlewars">
+    <meta name="description" content="Fun 2d fighting game lol!">
+    <meta property="og:description" content="2d fighting game in your browser! circlewars!">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="surviv.io">
-    <meta property="og:url" content="https://surviv.io/">
-    <meta property="og:site_name" content="surviv.io">
-    <meta content="https://surviv.io/img/title.png" property="og:image">
-    <link rel="canonical" href="http://surviv.io" />
-    <link rel="apple-touch-icon-precomposed" href="img/icon_app.png">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
+    <meta property="og:title" content="CircleWars">
+    <meta property="og:site_name" content="circlewars">
+    <link rel="apple-touch-icon-precomposed" href="img/main.png">
+    <link rel="icon" href="img/main.png" type="image/x-icon">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+
 </head>
 
 <body>
     <div id='start-menu-wrapper'>
         <div id="background">
             <div id='start-main'>
-                <!-- <div id='popout-notice'>Pop it out!</div> -->
-
                 <div id='start-main-center'>
                     <div id='start-row-header'>
-                        <div id='server-warning'></div>
+                        <div id='server-warning'>gh</div>
                     </div>
                     <div id='start-row-top'>
                         <div id='start-menu' class='menu-column menu-block'>
                             <div id='player-options'>
-                                <input type='text' class='menu-option player-name-input' tabindex='0' placeholder='Name' id='player-name-input-solo' maxlength='16' />
+                                <input type='text' class='menu-option player-name-input' tabindex='0' placeholder='Name' id='player-name-input' maxlength='16' />
                             </div>
-                            <!-- <a class='btn-green btn-darken menu-option' id='btn-start-solo' data-label='Play Solo' data-l10n='index-play-solo'>Play Solo</a> -->
                             <div id='btns-quick-start'>
-                                <!-- <a class='btn-green btn-darken menu-option' id='btn-start-duo' data-label='Play Duo' data-l10n='index-play-duo'>Play Duo</a> -->
-                                <a class='btn-green btn-darken menu-option start-option-lg' id='btn-start-squad' data-label='Play Squad' data-l10n='index-play'>Play</a>
-                            </div>
-                            <!--
-                <div class='btns-double-row'>
-                    <a class='btn-darken menu-option btn-team-option' id='btn-join-team' data-l10n='index-join-team'>Join Team</a>
-                    <a class='btn-darken menu-option btn-team-option' id='btn-create-team' data-l10n='index-create-team'>Create Team</a>
-                </div>
-                -->
-
-                            <div id='start-help'>
-
+                                <a class='btn-green btn-darken menu-option start-option-lg' id='btn-play' data-label='Play Squad' data-l10n='index-play'>Play
+                                </a>
                             </div>
                         </div>
-                        <!-- <div id='social-share-block-wrapper'>
-                      <div id='social-share-block' class='menu-block'>
-                          <div class='btn-social-wrapper'>
-                              <a href='https://facebook.com/surviviogame' target='_blank' class='btn-social btn-darken btn-facebook'></a>
-                              <a href='https://twitter.com/survivio' target='_blank' class='btn-social btn-darken btn-twitter'></a>
-                              <a href='https://www.instagram.com/surviviogame/' target='_blank' class='btn-social btn-darken btn-instagram'></a>
-                              <a href='https://discord.gg/survivio' target='_blank' class='btn-social btn-darken btn-discord'></a>
-                              <a href='https://www.youtube.com/c/survivio?sub_confirmation=1' target='_blank' class='btn-social btn-darken btn-youtube'></a>
-                          </div>
-                      </div>
-                  </div> -->
                     </div>
                 </div>
                 <div id='start-bottom-left'>
@@ -91,183 +64,10 @@
             </div>
         </div>
         <!-- Modals -->
-        <div id='ui-modal-keybind' class='ui-modal-keybind modal' oncontextmenu='return false;'>
-            <div class='ui-modal-keybind-content modal-content'>
-                <div id='ui-modal-keybind-header' class='modal-header'>
-                    <span id='ui-close-keybind' class='close close-corner'></span>
-                    <h2 data-l10n='index-customize-keybinds'>Customize Keybinds</h2>
-                </div>
-                <div id='ui-modal-keybind-body' class='modal-body'>
-                    <div id='ui-modal-keybind-list' class='js-keybind-list'></div>
-                    <div id='ui-modal-keybind-share'>
-                        <div class='ui-modal-keybind-share-row'>
-                            <div class='ui-modal-keybind-share-elem'>
-                                <span data-l10n='index-keybind-link'>Share your keybinds with this code</span>:
-                            </div>
-                            <div class='ui-modal-keybind-share-elem'>
-                                <div id='keybind-link-text'>
-                                    <div id='keybind-link'>aFvc42SfhpoFlrJKVkA1fx+5afasdf9034hfSF09nASqqF</div>
-                                    <span id='keybind-copy' class='copy-item btn-darken'></span>
-                                </div>
-                            </div>
-                        </div>
-                        <span class='keybind-share-paste-text' data-l10n='index-keybind-paste'>Load keybinds using a
-                                code here</span><span>:</span>
-                        <div id='keybind-warning' class='link-warning'>Invalid code!</div>
-                        <div class='ui-modal-keybind-share-row'>
-                            <input type='text' class='menu-option' contenteditable="false" tabindex='0' autofocus placeholder='Paste a keybind code here' id='keybind-code-input' />
-                            <a class='btn-game-menu btn-darken' id='btn-keybind-code-load' data-l10n='index-keybind-apply'>Load</a>
-                        </div>
-                    </div>
-                </div>
-                <div id='ui-modal-keybind-footer' class='modal-footer modal-footer-round'>
-                    <a class='js-btn-keybind-share btn-game-menu btn-darken' data-l10n='game-share'>Share</a>
-                    <a class='js-btn-keybind-restore btn-game-menu btn-darken' data-l10n='game-restore-defaults'>Restore
-                            Defaults</a>
-                </div>
-            </div>
-        </div>
-        <div id='modal-customize' class='modal'>
-            <div class='modal-content'>
-                <div id='modal-customize-header' class='modal-header'>
-                    <span id='close-emotes' class='close close-corner'></span>
-                    <h2 data-l10n='index-customize-loadout'>Customize Emotes</h2>
-                </div>
-                <div id='modal-customize-body' class='modal-body'>
-                    <div id='modal-customize-list'></div>
-                    <div id='customize-emote-wheel' class='ui-emote-wheel'>
-                        <div id='customize-emote-middle' class='ui-emote-middle ui-emote-circle ui-emote-parent'>
-                            <div class='ui-emote ui-emote-bg-circle'></div>
-                            <div class='ui-emote ui-emote-hl'></div>
-                            <div class='customize-emote-slot customize-emote-image ui-emote-image'></div>
-                        </div>
-                        <div id='customize-emote-top' class='ui-emote-top ui-emote-quarter ui-emote-parent' data-slot='emoteTop' data-id=''>
-                            <div class='ui-emote ui-emote-bg-quarter'></div>
-                            <div class='ui-emote ui-emote-hl'></div>
-                            <div class='customize-emote-slot customize-emote-image ui-emote-image'></div>
-                            <div class='customize-col customize-col-small' draggable="true"></div>
-                        </div>
-                        <div id='customize-emote-right' class='ui-emote-right ui-emote-quarter ui-emote-parent' data-slot='emoteRight' data-id=''>
-                            <div class='ui-emote ui-emote-bg-quarter'></div>
-                            <div class='ui-emote ui-emote-hl'></div>
-                            <div class='customize-emote-slot customize-emote-image ui-emote-image'></div>
-                            <div class='customize-col customize-col-small' draggable="true"></div>
-                        </div>
-                        <div id='customize-emote-bottom' class='ui-emote-bottom ui-emote-quarter ui-emote-parent' data-slot='emoteBottom' data-id=''>
-                            <div class='ui-emote ui-emote-bg-quarter'></div>
-                            <div class='ui-emote ui-emote-hl'></div>
-                            <div class='customize-emote-slot customize-emote-image ui-emote-image'></div>
-                            <div class='customize-col customize-col-small' draggable="true"></div>
-                        </div>
-                        <div id='customize-emote-left' class='ui-emote-left ui-emote-quarter ui-emote-parent' data-slot='emoteLeft' data-id=''>
-                            <div class='ui-emote ui-emote-bg-quarter'></div>
-                            <div class='ui-emote ui-emote-hl'></div>
-                            <div class='customize-emote-slot customize-emote-image ui-emote-image'></div>
-                            <div class='customize-col customize-col-small' draggable="true"></div>
-                        </div>
-                    </div>
-                    <div id='customize-emote-autos'>
-                        <div id='customize-emote-win' class='ui-emote-middle ui-emote-circle ui-emote-parent' data-slot='emoteWin' data-id=''>
-                            <div class='ui-emote ui-emote-auto-trash'></div>
-                            <div class='ui-emote ui-emote-auto-icon ui-emote-auto-chicken'></div>
-                            <div class='ui-emote ui-emote-bg-circle-outer'></div>
-                            <div class='ui-emote ui-emote-bg-circle'></div>
-                            <div class='ui-emote ui-emote-hl'></div>
-                            <div class='customize-emote-slot customize-emote-image'></div>
-                            <div class='customize-col customize-col-large' draggable="true"></div>
-                        </div>
-                        <div id='customize-emote-death' class='ui-emote-middle ui-emote-circle ui-emote-parent' data-slot='emoteDeath' data-id=''>
-                            <div class='ui-emote ui-emote-auto-trash'></div>
-                            <div class='ui-emote ui-emote-auto-icon ui-emote-auto-skull'></div>
-                            <div class='ui-emote ui-emote-bg-circle-outer'></div>
-                            <div class='ui-emote ui-emote-bg-circle'></div>
-                            <div class='ui-emote ui-emote-hl'></div>
-                            <div class='customize-emote-slot customize-emote-image'></div>
-                            <div class='customize-col customize-col-large' draggable="true"></div>
-                        </div>
-                    </div>
-                </div>
-                <div id='modal-customize-footer' class='modal-footer modal-footer-round'>
-                </div>
-            </div>
-        </div>
-        <div id='modal-settings' class='modal'>
-            <div class='modal-content'>
-                <div class='modal-header'>
-                    <span class='close close-corner'></span>
-                    <h2 data-l10n='index-settings'>Settings</h2>
-                </div>
-                <div id='modal-settings-body' class='modal-body'>
-                    <div id='language-select-mobile-wrapper' class='modal-settings-item'>
-                        <div class="language-select-wrap">
-                            <select class='language-select'>
-                                    <option value='da'>Dansk</option>
-                                    <option value='de'>Deutsch</option>
-                                    <option value='en'>English</option>
-                                    <option value='es'>Español</option>
-                                    <option value='fr'>Français</option>
-                                    <option value='it'>Italiano</option>
-                                    <option value='nl'>Nederlands</option>
-                                    <option value='pl'>Polski</option>
-                                    <option value='pt'>Português</option>
-                                    <option value='ru'>Русский</option>
-                                    <option value='sv'>Svenska</option>
-                                    <option value='tr'>Türkçe</option>
-                                    <option value='jp'>日本語</option>
-                                    <option value='ko'>한국어</option>
-                                    <option value='th'>ภาษาไทย</option>
-                                    <option value='zh-cn'>中文简体</option>
-                                    <option value='zh-tw'>中文繁體</option>
-                                </select>
-                        </div>
-                    </div>
-                    <div id='modal-settings-high-res' class='modal-settings-item'>
-                        <input id='highResTex' type='checkbox'>
-                        <p class='modal-settings-checkbox-text' data-l10n='index-high-resolution'>High resolution (check to increase visual quality)</p>
-                    </div>
-                    <div class='modal-settings-item'>
-                        <input id='screenShake' type='checkbox'>
-                        <p class='modal-settings-checkbox-text' data-l10n='index-screen-shake'>Screen shake</p>
-                    </div>
-                    <div class='modal-settings-item'>
-                        <input id='anonPlayerNames' type='checkbox'>
-                        <p class='modal-settings-checkbox-text' data-l10n='index-anon-player-names'>Anonymize player names
-                        </p>
-                    </div>
-                    <div class="modal-settings-item slider-container">
-                        <p data-l10n='index-master-volume'>Master Volume</p>
-                        <input type="range" min="0" max="100" value="50" class="slider sl-master-volume" id="">
-                    </div>
-                    <div class="modal-settings-item slider-container">
-                        <p data-l10n='index-sfx-volume'>SFX Volume</p>
-                        <input type="range" min="0" max="100" value="50" class="slider sl-sound-volume" id="">
-                    </div>
-                    <div class="modal-settings-item slider-container">
-                        <p data-l10n='index-music-volume'>Music Volume</p>
-                        <input type="range" min="0" max="100" value="50" class="slider sl-music-volume" id="">
-                    </div>
-                </div>
-                <div class='modal-footer'></div>
-            </div>
-        </div>
-        <div id='modal-notification' class='modal'>
-            <div class='modal-content'>
-                <div class='modal-header'>
-                    <span class='close close-corner'></span>
-                    <h2>Alert</h2>
-                </div>
-                <div class='modal-body'>
-                    <p class='modal-settings-text'></p>
-                </div>
-                <div class='modal-footer modal-footer-round'>
-                    <h3 class='close close-footer'>OK</h3>
-                </div>
-            </div>
-        </div>
+
     </div>
     </div>
-    </script>
-    <script type="text/javascript" src="js/app.79bd3bab.js"></script>
+    <script src="dist/bundle.js"></script>
 </body>
 
 </html>

@@ -1,16 +1,22 @@
 {
-  "name": "surviv-clone",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "author": "",
-  "license": "ISC"
+    "name": "circlewar",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "dependencies": {
+        "css-loader": "^5.0.1",
+        "express": "^4.17.1",
+        "style-loader": "^2.0.0",
+        "webpack": "^5.11.0",
+        "webpack-node-externals": "^2.5.2"
+    },
+    "devDependencies": {
+        "webpack-cli": "^4.2.0"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "author": "",
+    "license": "ISC"
 }

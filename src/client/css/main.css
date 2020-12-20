@@ -1,3 +1,26 @@
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    border-top-color: #000;
+    animation: spinner .6s linear infinite;
+}
+
+
 /* Breaks in Bootstrap 4 are:
  *
  * extra large devices (wide screens): 1200px,
@@ -8,6 +31,36 @@
  * However... iPhone X landscape width: 812px
  * https://mydevice.io/devices/
  */
+
+#server-warning {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    bottom: -35px;
+    box-sizing: border-box;
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    height: 30px;
+    left: 0px;
+    line-height: 30px;
+    margin: auto;
+    opacity: 0;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    width: 300px;
+}
+
+@media screen and (max-width: 850px) {
+    #server-warning {
+        font-size: 12px;
+        height: 18px;
+        line-height: 20px;
+        position: relative;
+        top: 82px;
+        width: 200px;
+    }
+}
 
  :root {
     --side-pad: 12px;
@@ -5094,6 +5147,3 @@ input [type="image"]:focus {
         transform-origin: bottom left;
     }
 }
-
-
-/*# sourceMappingURL=app.16305142.css.map*/
